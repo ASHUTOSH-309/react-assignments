@@ -11,6 +11,7 @@ function App() {
     <div>
       <RecoilRoot>
         <Count />
+        <EvenOdd />
       </RecoilRoot>
     </div>
   )
@@ -43,6 +44,22 @@ function Buttons() {
     <button onClick={() => setCount(count=>count + 1)}>Increase</button>
     <button onClick={() => setCount(count=>count - 1)} >Decrease</button>
   </div>
+}
+
+
+
+function EvenOdd(){
+
+const count=useRecoilValue(countAtom)
+
+return <div>
+
+{count%2===0 ? ( <p>{count} is even</p>  ):(  <p>{count} is odd</p>  ) }
+
+</div>
+
+
+
 }
 
 export default App
