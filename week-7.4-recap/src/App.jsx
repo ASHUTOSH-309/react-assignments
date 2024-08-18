@@ -20,14 +20,6 @@ function MainApp() {
   const[networkCount,setNetworkCount]=useRecoilState(notifications)
   const totalNotificationCount=useRecoilValue(totalNotificationSelector)
 
-useEffect(()=>{
-
-  axios.get("https://sum-server.100xdevs.com/notifications").
-  then((res)=>setNetworkCount(res.data))
-
-
-},[])
-
 
   return <div>
     <button>Home</button>
